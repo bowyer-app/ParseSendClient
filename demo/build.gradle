@@ -21,5 +21,11 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    //push
+    compile 'com.parse.bolts:bolts-android:1.+'
+    compile fileTree(dir: 'libs', include: 'Parse-*.jar')
+    compile project(':parsesendclient')
+    //ui
+    compile 'com.jakewharton:butterknife:6.1.0'
     compile 'com.android.support:appcompat-v7:22.2.1'
 }
