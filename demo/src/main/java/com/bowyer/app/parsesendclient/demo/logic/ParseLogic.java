@@ -15,7 +15,7 @@ import java.util.List;
  */
 public class ParseLogic {
 
-    public static void ParceInit(Context context) {
+    public static void ParseInit(Context context) {
         Parse.initialize(context, EnvConst.PARSE_APPLICATION_ID,
                 EnvConst.PARSE_CLIENT_KEY);
         setChannel("demo");

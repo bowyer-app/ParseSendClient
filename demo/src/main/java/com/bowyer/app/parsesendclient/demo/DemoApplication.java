@@ -12,6 +12,6 @@ public class DemoApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        ParseLogic.ParceInit(getApplicationContext());
+        ParseLogic.ParseInit(getApplicationContext());
     }
 }

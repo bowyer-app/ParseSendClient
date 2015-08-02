@@ -1,4 +1,4 @@
-package com.bowyer.app.parsesendclient.demo.constant;
+package com.bowyer.app.parsesendclient;
 
 import java.util.ResourceBundle;
 
@@ -11,7 +11,7 @@ public class EnvConst {
 
 
     public static final String PARSE_APPLICATION_ID = PROPERTIES.getString("PARSE_APPLICATION_ID");
-    public static final String PARSE_CLIENT_KEY = PROPERTIES.getString("PARSE_CLIENT_KEY");
+    public static final String PARSE_REST_API_KEY = PROPERTIES.getString("PARSE_REST_API_KEY");
 
     public static class ParseProperties {
 

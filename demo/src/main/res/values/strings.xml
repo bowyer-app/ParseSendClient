@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">ParseSendClient</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="push_title_hint">Push title</string>
+    <string name="push_message_hint">Push message</string>
+    <string name="send_push">SendPush</string>
 </resources>
