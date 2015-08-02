@@ -10,7 +10,27 @@ Use Parse REST API Push Notifications
 Usage
 ====
 
+
+Download
+====
+Download via Gradle:
+
+```
+repositories {
+    maven {
+       url "https://dl.bintray.com/bowyer-app/maven/"
+    }
+}
+
+dependencies {
+   compile 'com.bowyer.app:parsesendclient:0.1.0'
+}
+```
+
 # parsepush.properties
+
+add parsepush.properties into resources dir
+
 | property  | description |
 | ------------- | ------------- |
 | PARSE_APPLICATION_ID | your Application ID |
