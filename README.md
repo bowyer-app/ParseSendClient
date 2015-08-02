@@ -23,7 +23,7 @@ repositories {
 }
 
 dependencies {
-   compile 'com.bowyer.app:parsesendclient:0.1.0'
+   compile 'com.bowyer.app:parsesendclient:0.1.0@aar'
 }
 ```
 
