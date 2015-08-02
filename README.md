@@ -76,7 +76,7 @@ Download via Gradle:
 ```
 repositories {
     maven {
-       url "https://dl.bintray.com/bowyer-app/maven/"
+       jcenter()
     }
 }
 
