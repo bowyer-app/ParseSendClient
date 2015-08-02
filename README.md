@@ -9,7 +9,65 @@ Use Parse REST API Push Notifications
 
 Usage
 ====
+Create notification Object
 
+```java
+ParsePushModel model = new ParsePushModel().setTitle(pushTitle).setMessage(pushMessage);
+```
+
+Create channel
+
+```java
+String[] channel = new String[1];
+channel[0] = "demo";
+```
+
+Send push.
+
+```java
+PushSendLogic.sendPush(model, channel, new PushSendLogic.PushSendCallBack() {
+    @Override
+    public void onSuccess() {
+
+    }
+
+    @Override
+    public void onFailure(String message) {
+
+    }
+
+});
+```
+
+Here's Custom push Object
+
+```java
+public class ParsePushModel {
+
+    String title;
+    String message;
+
+
+    public ParsePushModel setTitle(String title) {
+        this.title = title;
+        return this;
+    }
+
+    public ParsePushModel setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+}
+```
 
 Download
 ====
@@ -44,7 +102,8 @@ add parsepush.properties into resources dir
 ![Parse](./art/properties.png)
 License
 --------
-
+```
 Copyright (c) 2015 Bowyer
 Released under the MIT license
 http://opensource.org/licenses/mit-license.php
+```
