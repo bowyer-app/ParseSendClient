@@ -24,6 +24,10 @@ repositories {
 
 dependencies {
    compile 'com.bowyer.app:parsesendclient:0.1.0@aar'
+   compile 'com.squareup.retrofit:retrofit:1.9.0'
+   compile 'com.google.code.gson:gson:1.7.2'
+   compile 'com.squareup.okhttp:okhttp:2.2.0'
+   compile 'com.squareup.okhttp:okhttp-urlconnection:2.2.0'
 }
 ```
 
