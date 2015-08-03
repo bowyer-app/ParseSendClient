@@ -25,9 +25,32 @@
             android:layout_height="100dp"/>
 
     <Button
+            android:id="@+id/date"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/push_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:id="@+id/time"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:id="@+id/send_push_now"
+            android:layout_above="@+id/send_scheduling_push"
+            android:text="@string/send_push_now"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <Button
             android:layout_alignParentBottom="true"
-            android:id="@+id/send_push"
-            android:text="@string/send_push"
+            android:layout_marginTop="20dp"
+            android:id="@+id/send_scheduling_push"
+            android:text="@string/send_scheduling_push"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 </RelativeLayout>
