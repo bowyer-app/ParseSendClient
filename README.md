@@ -22,7 +22,7 @@ String[] channel = new String[1];
 channel[0] = "demo";
 ```
 
-Send push.
+Send push now.
 
 ```java
 PushSendLogic.sendPush(model, channel, new PushSendLogic.PushSendCallBack() {
@@ -36,6 +36,29 @@ PushSendLogic.sendPush(model, channel, new PushSendLogic.PushSendCallBack() {
 
     }
 
+});
+```
+
+Send scheduling push.
+
+```java
+Calendar calendar = Calendar.getInstance();
+//set push date
+calendar.set(year, monthOfYear, dayOfMonth);
+//set push time
+calendar.set(Calendar.HOUR_OF_DAY, hourOfDay);
+calendar.set(Calendar.MINUTE, minute);
+//call sendSchedulingPush
+PushSendLogic.sendSchedulingPush(model, calendar, channel,
+    new PushSendLogic.PushSendCallBack() {
+         @Override
+         public void onSuccess() {
+        
+        }
+
+        @Override
+        public void onFailure(String message) {
+        }
 });
 ```
 
