@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                tools:context=".PushSendActivity">
+
+    <EditText
+            android:id="@+id/push_title"
+            android:singleLine="true"
+            android:hint="@string/push_title_hint"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+    <EditText
+            android:id="@+id/push_message"
+            android:layout_below="@+id/push_title"
+            android:layout_marginTop="20dp"
+            android:gravity="top"
+            android:hint="@string/push_message_hint"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"/>
+
+    <Button
+            android:id="@+id/date"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/push_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:id="@+id/time"
+            android:textSize="20sp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:id="@+id/send_push_now"
+            android:layout_above="@+id/send_scheduling_push"
+            android:text="@string/send_push_now"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    <Button
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="20dp"
+            android:id="@+id/send_scheduling_push"
+            android:text="@string/send_scheduling_push"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SendDemo</string>
+
+    <string name="push_title_hint">Push title</string>
+    <string name="push_message_hint">Push message</string>
+    <string name="send_push_now">SendPushNow</string>
+    <string name="send_scheduling_push">SendSchedulingPush</string>
+</resources>
