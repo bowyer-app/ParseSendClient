@@ -6,8 +6,14 @@ package com.bowyer.app.parsesendclient.senddemo.model;
 public class ParsePushModel {
 
     String title;
+
     String message;
 
+    String url;
+
+    public static ParsePushModel to() {
+        return new ParsePushModel();
+    }
 
     public ParsePushModel setTitle(String title) {
         this.title = title;
@@ -19,12 +25,21 @@ public class ParsePushModel {
         return this;
     }
 
+    public ParsePushModel setUrl(String url) {
+        this.url = url;
+        return this;
+    }
+
     public String getTitle() {
         return title;
     }
 
     public String getMessage() {
         return message;
+    }
+
+    public String getUrl() {
+        return url;
     }
 
 }

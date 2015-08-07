@@ -23,12 +23,20 @@
             android:hint="@string/push_message_hint"
             android:layout_width="match_parent"
             android:layout_height="100dp"/>
+    <EditText
+            android:id="@+id/push_url"
+            android:layout_below="@+id/push_message"
+            android:layout_marginTop="20dp"
+            android:gravity="top"
+            android:hint="@string/push_url_hint"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
 
     <Button
             android:id="@+id/date"
             android:textSize="20sp"
             android:layout_marginTop="20dp"
-            android:layout_below="@+id/push_message"
+            android:layout_below="@+id/push_url"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 

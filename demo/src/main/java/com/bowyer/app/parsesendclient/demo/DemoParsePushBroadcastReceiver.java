@@ -55,7 +55,7 @@ public class DemoParsePushBroadcastReceiver extends ParsePushBroadcastReceiver {
 
         String message = mPushModel.getMessage();
 
-        Intent intent = new Intent(context, PushSendActivity.class);
+        Intent intent = new Intent(context, MainActivity.class);
         intent.putExtras(extras);
 
         PendingIntent pendingIntent = PendingIntent
