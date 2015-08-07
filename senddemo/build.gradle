@@ -26,5 +26,5 @@ dependencies {
     compile 'com.jakewharton:butterknife:6.1.0'
     compile 'com.android.support:appcompat-v7:22.2.1'
     compile 'com.github.citux:datetimepicker:0.1.2'
-
+    compile 'com.github.dmytrodanylyk.android-process-button:library:1.0.4'
 }

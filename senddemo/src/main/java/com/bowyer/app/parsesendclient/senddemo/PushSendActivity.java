@@ -5,6 +5,7 @@ import com.android.datetimepicker.time.RadialPickerLayout;
 import com.android.datetimepicker.time.TimePickerDialog;
 import com.bowyer.app.parsesendclient.PushSendLogic;
 import com.bowyer.app.parsesendclient.senddemo.model.ParsePushModel;
+import com.dd.processbutton.iml.ActionProcessButton;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -43,6 +44,12 @@ public class PushSendActivity extends ActionBarActivity
 
     @InjectView(R.id.time)
     Button mTime;
+
+    @InjectView(R.id.send_push_now)
+    ActionProcessButton mSendPushNow;
+
+    @InjectView(R.id.send_scheduling_push)
+    ActionProcessButton mSendSchedulingPush;
 
     private DateFormat dateFormat;
 
@@ -87,6 +94,7 @@ public class PushSendActivity extends ActionBarActivity
             return;
         }
 
+        mSendPushNow.setProgress(50);
         String[] channel = new String[1];
         channel[0] = "demo";
 
@@ -94,10 +102,12 @@ public class PushSendActivity extends ActionBarActivity
                 new PushSendLogic.PushSendCallBack() {
                     @Override
                     public void onSuccess() {
+                        mSendPushNow.setProgress(100);
                     }
 
                     @Override
                     public void onFailure(String message) {
+                        mSendPushNow.setProgress(-1);
                     }
                 });
     }
@@ -110,6 +120,8 @@ public class PushSendActivity extends ActionBarActivity
             return;
         }
 
+        mSendSchedulingPush.setProgress(50);
+
         String[] channel = new String[1];
         channel[0] = "demo";
 
@@ -117,10 +129,12 @@ public class PushSendActivity extends ActionBarActivity
                 new PushSendLogic.PushSendCallBack() {
                     @Override
                     public void onSuccess() {
+                        mSendSchedulingPush.setProgress(100);
                     }
 
                     @Override
                     public void onFailure(String message) {
+                        mSendSchedulingPush.setProgress(-1);
                     }
                 });
     }
