@@ -8,12 +8,16 @@ Use Parse REST API Push Notifications
 
 [Parse REST API](https://parse.com/docs/rest/guide/#quick-reference-push-notifications)
 
+![Demo send now](./art/sendnow.gif)
+![Demo sckeduling](./art/schedule.gif)
+
 Usage
 ====
 Create notification Object
 
 ```java
-ParsePushModel model = new ParsePushModel().setTitle(pushTitle).setMessage(pushMessage);
+ParsePushModel model = ParsePushModel.to().setTitle(pushTitle).setMessage(
+                                       pushMessage).setUrl(pushUrl);
 ```
 
 Create channel
@@ -69,8 +73,14 @@ Here's Custom push Object
 public class ParsePushModel {
 
     String title;
+
     String message;
 
+    String url;
+
+    public ParsePushModel to() {
+        return new ParsePushModel();
+    }
 
     public ParsePushModel setTitle(String title) {
         this.title = title;
@@ -82,12 +92,21 @@ public class ParsePushModel {
         return this;
     }
 
+    public ParsePushModel setUrl(String url) {
+        this.url = url;
+        return this;
+    }
+
     public String getTitle() {
         return title;
     }
 
     public String getMessage() {
         return message;
+    }
+
+    public String getUrl() {
+        return url;
     }
 
 }

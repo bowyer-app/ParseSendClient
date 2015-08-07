@@ -1,4 +1,4 @@
-package com.bowyer.app.parsesendclient.demo.model;
+package com.bowyer.app.parsesendclient.senddemo.model;
 
 /**
  * Created by Bowyer on 2015/08/02.
@@ -11,7 +11,7 @@ public class ParsePushModel {
 
     String url;
 
-    public ParsePushModel to() {
+    public static ParsePushModel to() {
         return new ParsePushModel();
     }
 

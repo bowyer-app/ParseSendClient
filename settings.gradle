@@ -1,1 +1,1 @@
-include ':demo', ':parsesendclient'
+include ':demo', ':parsesendclient', ':senddemo'

@@ -1,5 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -11,46 +12,73 @@
     <EditText
             android:id="@+id/push_title"
             android:singleLine="true"
+            android:textColor="#000"
             android:hint="@string/push_title_hint"
             android:layout_width="match_parent"
             android:layout_height="50dp"/>
 
     <EditText
             android:id="@+id/push_message"
+            android:textColor="#000"
             android:layout_below="@+id/push_title"
             android:layout_marginTop="20dp"
             android:gravity="top"
             android:hint="@string/push_message_hint"
             android:layout_width="match_parent"
             android:layout_height="100dp"/>
+    <EditText
+            android:id="@+id/push_url"
+            android:textColor="#000"
+            android:layout_below="@+id/push_message"
+            android:layout_marginTop="20dp"
+            android:gravity="top"
+            android:hint="@string/push_url_hint"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
 
     <Button
             android:id="@+id/date"
             android:textSize="20sp"
+            android:background="@color/accent"
             android:layout_marginTop="20dp"
-            android:layout_below="@+id/push_message"
-            android:layout_width="wrap_content"
+            android:layout_below="@+id/push_url"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
     <Button
             android:id="@+id/time"
+            android:background="@color/accent"
             android:textSize="20sp"
             android:layout_marginTop="20dp"
             android:layout_below="@+id/date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-    <Button
-            android:id="@+id/send_push_now"
-            android:layout_above="@+id/send_scheduling_push"
-            android:text="@string/send_push_now"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-    <Button
+
+    <com.dd.processbutton.iml.ActionProcessButton
+            android:id="@+id/send_push_now"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/send_scheduling_push"
+            android:text="@string/send_push_now"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            custom:pb_textComplete="Done"
+            custom:pb_textProgress="Sending..."
+            custom:pb_textError="Error"/>
+
+    <com.dd.processbutton.iml.ActionProcessButton
             android:layout_alignParentBottom="true"
             android:layout_marginTop="20dp"
             android:id="@+id/send_scheduling_push"
-            android:text="@string/send_scheduling_push"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="@string/send_scheduling_push"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            custom:pb_textComplete="Done"
+            custom:pb_textProgress="Sending..."
+            custom:pb_textError="Error"/>
+
 </RelativeLayout>
