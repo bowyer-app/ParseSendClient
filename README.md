@@ -7,6 +7,9 @@ Use Parse REST API Push Notifications
 
 [Parse REST API](https://parse.com/docs/rest/guide/#quick-reference-push-notifications)
 
+![Demo send now](./art/sendnow.gif)
+![Demo sckeduling](./art/schedule.gif)
+
 Usage
 ====
 Create notification Object

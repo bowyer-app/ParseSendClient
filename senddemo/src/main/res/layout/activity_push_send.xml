@@ -12,12 +12,14 @@
     <EditText
             android:id="@+id/push_title"
             android:singleLine="true"
+            android:textColor="#000"
             android:hint="@string/push_title_hint"
             android:layout_width="match_parent"
             android:layout_height="50dp"/>
 
     <EditText
             android:id="@+id/push_message"
+            android:textColor="#000"
             android:layout_below="@+id/push_title"
             android:layout_marginTop="20dp"
             android:gravity="top"
@@ -26,6 +28,7 @@
             android:layout_height="100dp"/>
     <EditText
             android:id="@+id/push_url"
+            android:textColor="#000"
             android:layout_below="@+id/push_message"
             android:layout_marginTop="20dp"
             android:gravity="top"
