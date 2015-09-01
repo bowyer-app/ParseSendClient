@@ -11,6 +11,8 @@ public class ParsePushModel {
 
     String url;
 
+    boolean forceSound;
+
     public static ParsePushModel to() {
         return new ParsePushModel();
     }
@@ -30,6 +32,11 @@ public class ParsePushModel {
         return this;
     }
 
+    public ParsePushModel setForceSound(boolean forceSound) {
+        this.forceSound = forceSound;
+        return this;
+    }
+
     public String getTitle() {
         return title;
     }
@@ -42,4 +49,7 @@ public class ParsePushModel {
         return url;
     }
 
+    public boolean forceSound() {
+        return forceSound;
+    }
 }

@@ -27,4 +27,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:22.2.1'
     compile 'com.github.citux:datetimepicker:0.1.2'
     compile 'com.github.dmytrodanylyk.android-process-button:library:1.0.4'
+    compile 'com.github.rey5137:material:1.2.1'
 }

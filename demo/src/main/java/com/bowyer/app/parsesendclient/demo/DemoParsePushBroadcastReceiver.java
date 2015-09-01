@@ -12,6 +12,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
+import android.media.AudioManager;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
 import android.text.TextUtils;
@@ -22,6 +23,7 @@ import android.text.TextUtils;
 public class DemoParsePushBroadcastReceiver extends ParsePushBroadcastReceiver {
 
     private ParsePushModel mPushModel;
+    private int VLUME_SIZE = 2;//sound size
 
     public void onPushReceive(final Context context, Intent intent) {
         Bundle extra = intent.getExtras();
@@ -42,7 +44,17 @@ public class DemoParsePushBroadcastReceiver extends ParsePushBroadcastReceiver {
 
         int icon = 0;
         String title = mPushModel.getTitle();
+        boolean forceSound = mPushModel.forceSound();
 
+        if (forceSound) {
+            //if true force sound.
+            AudioManager manager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
+
+            int maxvolume = manager.getStreamMaxVolume(AudioManager.STREAM_RING);
+
+            manager.setStreamVolume(AudioManager.STREAM_RING, maxvolume / VLUME_SIZE,
+                    AudioManager.FLAG_VIBRATE);
+        }
         try {
             ApplicationInfo applicationInfo = packageManager
                     .getApplicationInfo(context.getPackageName(), 0);
@@ -71,7 +83,7 @@ public class DemoParsePushBroadcastReceiver extends ParsePushBroadcastReceiver {
         builder.setAutoCancel(true);
 
         builder.setDefaults(Notification.DEFAULT_VIBRATE
-                | Notification.DEFAULT_LIGHTS);
+                | Notification.DEFAULT_LIGHTS | Notification.DEFAULT_SOUND);
         return builder.build();
 
     }

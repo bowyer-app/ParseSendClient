@@ -6,6 +6,7 @@ import com.android.datetimepicker.time.TimePickerDialog;
 import com.bowyer.app.parsesendclient.PushSendLogic;
 import com.bowyer.app.parsesendclient.senddemo.model.ParsePushModel;
 import com.dd.processbutton.iml.ActionProcessButton;
+import com.rey.material.widget.Switch;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -50,6 +51,9 @@ public class PushSendActivity extends ActionBarActivity
 
     @InjectView(R.id.send_scheduling_push)
     ActionProcessButton mSendSchedulingPush;
+
+    @InjectView(R.id.notification_switch)
+    Switch mSwitch;
 
     private DateFormat dateFormat;
 
@@ -151,6 +155,7 @@ public class PushSendActivity extends ActionBarActivity
         String title = mPushTitle.getText().toString();
         String message = mPushMessage.getText().toString();
         String url = mPushUrl.getText().toString();
+        boolean forceSound = mSwitch.isChecked();
 
         if (!TextUtils.isEmpty(url) && !URLUtil.isValidUrl(url)) {
             return null;
@@ -161,7 +166,7 @@ public class PushSendActivity extends ActionBarActivity
         String pushUrl = TextUtils.isEmpty(url) ? null : url;
 
         return ParsePushModel.to().setTitle(pushTitle).setMessage(
-                pushMessage).setUrl(pushUrl);
+                pushMessage).setUrl(pushUrl).setForceSound(forceSound);
     }
 
     private void update() {
