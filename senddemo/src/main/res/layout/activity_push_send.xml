@@ -26,6 +26,7 @@
             android:hint="@string/push_message_hint"
             android:layout_width="match_parent"
             android:layout_height="100dp"/>
+
     <EditText
             android:id="@+id/push_url"
             android:textColor="#000"
@@ -36,28 +37,56 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"/>
 
+    <RelativeLayout
+            android:layout_below="@+id/push_url"
+            android:id="@+id/notification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:text="@string/force_sound"
+                android:layout_width="wrap_content"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:layout_height="20dp"/>
+
+        <com.rey.material.widget.Switch
+                custom:sw_trackColor="@color/app_gray"
+                android:id="@+id/notification_switch"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                style="@style/Material.Widget.Switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:checked="false"/>
+    </RelativeLayout>
+
     <Button
             android:id="@+id/date"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:background="@color/accent"
-            android:layout_marginTop="20dp"
-            android:layout_below="@+id/push_url"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/notification"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
     <Button
             android:id="@+id/time"
             android:background="@color/accent"
-            android:textSize="20sp"
-            android:layout_marginTop="20dp"
+            android:textSize="15sp"
+            android:layout_marginTop="5dp"
             android:layout_below="@+id/date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
     <com.dd.processbutton.iml.ActionProcessButton
             android:id="@+id/send_push_now"
+            android:layout_marginTop="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/time"
             android:layout_above="@+id/send_scheduling_push"
             android:text="@string/send_push_now"
             android:textColor="@android:color/white"
@@ -69,7 +98,7 @@
 
     <com.dd.processbutton.iml.ActionProcessButton
             android:layout_alignParentBottom="true"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:id="@+id/send_scheduling_push"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
